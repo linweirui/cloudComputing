@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="WeiruisV0.1">
+  <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"></script>
+    <script language="javascript" type="text/javascript">
+      angular.module('WeiruisV0.1', []);
+    
+      function SgSmartShop($scope){
+        $scope.word = "What do you want to buy?"; 
+        $scope.message = "";
+        
+        $scope.check = function(){
+          if ($scope.word === "adidas adipure 11 pro") {  
+              $scope.message = document.write('<img src="http://www.usasoccersport.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/d/adidas_adipure_11_pro_trx_fg_blue-white-infrared3.jpg" border="0" height=""/></a><br><br><h><center><b>ADIDAS ADIPURE 11 Pro</b><center></h><p><CENTER style="font-family:arial;font-size:15px;"><b>SGD 168</b><br>WESTON (Queensway Plaza)</CENTER></p>>');
+          } else if ($scope.word === "") {
+              $scope.message = "Please search for a valid product.";
+          } else {
+              $scope.message = "Sorry we currently do not have the price of the item!";
+          }
+        };
+      }
+    </script>
+  </header>
+  
+  <body ng-controller="SgSmartShop">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h>
+      <center>
+      <img src="http://i207.photobucket.com/albums/bb211/faterpig/sgsmartshoplogo_zpsf68e7c50.png" border="0" alt=" photo sgsmartshoplogo_zpsf68e7c50.png" height="93"/></a>
+      </center>
+    </h>
+    <p>
+      <CENTER>
+        <input type="text" ng-model="word" style="font-family:arial; WIDTH: 300px; HEIGHT: 18px size=25">
+        <br>
+        <input type="submit" ng-click="check()" style="font-family:arial; WIDTH: 100px; HEIGHT: 22px" size=25 value="GO!">
+      </CENTER>
+    </p>
+    <!--
+    <p>
+      <CENTER style="font-family:arial;font-size:15px;">
+        <br>
+          How to use?
+        </br>
+        <br>
+          1. Key in the product that you wish to buy.
+        </br>
+          2. Click on search.
+        </br>
+          3. Check out the product at the lowest prices!
+      </CENTER>
+    </p>
+    -->
+    <p>
+      <CENTER style="font-family:arial;font-size:15px">
+      {{message}}
+      </CENTER>
+    </p>
+  </body>
+</html>
